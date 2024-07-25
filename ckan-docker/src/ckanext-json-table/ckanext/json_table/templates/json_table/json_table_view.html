@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Table View</title>
+    <link rel="stylesheet" type="text/css" href="{{ h.url_for_static('css/style.css') }}">
+    <style>
+        .json-table-view-container {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .json-table-view {
+            width: 80%;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .json-table-title {
+            text-align: center;
+            color: #333;
+        }
+
+        .json-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .json-table th, .json-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .json-table th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        .json-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .json-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .no-response-message {
+            text-align: center;
+            color: #777;
+        }
+    </style>
+</head>
+<body class="json-table-view-container">
+    <div class="json-table-view">
+        <div class="json-table-title">JSON Table View</div>
+        {% if response %}
+            <table class="json-table">
+                <thead>
+                    <tr>
+                        {% for key in response[0].keys() %}
+                            <th>{{ key }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in response %}
+                        <tr>
+                            {% for value in item.values() %}
+                                <td>{{ value }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <div class="no-response-message">No response available</div>
+        {% endif %}
+    </div>
+</body>
+</html>

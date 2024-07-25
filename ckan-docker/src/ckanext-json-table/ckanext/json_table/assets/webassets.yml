@@ -1,0 +1,14 @@
+# json_table-js:
+#   filter: rjsmin
+#   output: ckanext-json_table/%(version)s-json_table.js
+#   contents:
+#     - js/json_table.js
+#   extra:
+#     preload:
+#       - base/main
+
+# json_table-css:
+#   filter: cssrewrite
+#   output: ckanext-json_table/%(version)s-json_table.css
+#   contents:
+#     - css/json_table.css
