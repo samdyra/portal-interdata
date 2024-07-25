@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  client:
+    image: dwiputrasam/client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "8800:8800"
