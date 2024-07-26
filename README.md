@@ -1,3 +1,105 @@
+# How to start the app
+
+### Prerequisites
+
+Make sure you have Docker and Docker Compose installed on your machine.
+
+---
+
+### Getting Started
+
+### CKAN Docker
+
+**Commands for building and running CKAN Docker images.**
+
+**Build CKAN Docker Images**
+
+To build the CKAN Docker images, run:
+
+```go
+make ckan-build
+```
+
+**Run CKAN Docker Containers**
+
+To run the CKAN Docker containers, run:
+
+```arduino
+make ckan-run
+```
+
+---
+
+### GeoJSON Docker
+
+**Commands for managing GeoJSON Docker container.**
+
+**Build GeoJSON Docker Image**
+
+To build the GeoJSON Docker image, run:
+
+```go
+make geojson-build
+```
+
+**Run GeoJSON Docker Container**
+
+To run the GeoJSON Docker container, run:
+
+```arduino
+make geojson-run
+```
+
+---
+
+### WebGIS Vite Docker
+
+**Commands for managing WebGIS Vite Docker containers.**
+
+**Build WebGIS Vite Docker Images**
+
+To build the WebGIS Vite Docker images, run:
+
+```go
+make webgis-build
+```
+
+**Start WebGIS Vite Docker Containers**
+
+To start the WebGIS Vite Docker containers, run:
+
+```go
+make webgis-up
+```
+
+---
+
+### GeoNetwork Docker
+
+**Commands for managing GeoNetwork.**
+
+**Start GeoNetwork**
+
+To start GeoNetwork, run:
+
+```go
+make geonetwork-start
+```
+
+**Stop GeoNetwork**
+
+To stop GeoNetwork, run:
+
+```arduino
+make geonetwork-stop
+```
+
+---
+
+### Additional Commands
+
+The Makefile includes additional commands for development, cleaning up resources, and more. Refer to the `Makefile` for a comprehensive list of commands available for each component.
+
 ## Objectives
 
 - Create a simple plugin or extension for visualizing JSON API data in tabular format on the CKAN platform.
